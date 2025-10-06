@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Order | Chacha</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #f5f5f0; 
+        }
+        header { 
+            background-color: #4b6043; 
+            color: white; 
+            padding: 1rem 0; 
+        }
+        .btn-custom { 
+            background-color: #4b6043; 
+            color: white; 
+            border: none; 
+        }
+        .btn-custom:hover { 
+            background-color: #394a34; 
+        }
+        .product-list label { 
+            font-weight: 500; 
+        }
+        .qty-inputs { 
+            width: 80px; 
+            margin-left: 10px; 
+        }
+        img {
+            width: 35px; 
+            height: 35px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <img src="https://www.popsci.com/wp-content/uploads/2021/10/15/close-up-photo-of-a-matcha-latte-cup.jpg?quality=85" alt="Chacha Logo" class="me-2">
+                Chacha
+            </a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="order.html">Order</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <h2 class="fw-bold text-center mb-4">Order Form</h2>
+        <form class="mx-auto" style="max-width:500px;">
+        <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name">
+        </div>
+
+        <div class="mb-3 product-list">
+            <label class="form-label fw-bold">Select Your Products</label><br>
+
+            <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="chawan">
+            <label class="form-check-label" for="chawan">Chawan (Bowl) - ₱1700</label>
+            <input type="number" id="chawan_qty" class="qty-inputs" min="1" value="1">
+            </div>
+
+            <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="chasen">
+            <label class="form-check-label" for="chasen">Chasen (Whisk) - ₱650</label>
+            <input type="number" id="chasen_qty" class="qty-inputs" min="1" value="1">
+            </div>
+
+            <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="chashaku">
+            <label class="form-check-label" for="chashaku">Chashaku (Bamboo Scoop) - ₱310</label>
+            <input type="number" id="chashaku_qty" class="qty-inputs" min="1" value="1">
+            </div>
+
+            <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="sifter">
+            <label class="form-check-label" for="sifter">Sifter - ₱60</label>
+            <input type="number" id="sifter_qty" class="qty-inputs" min="1" value="1">
+            </div>
+
+            <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="stand">
+            <label class="form-check-label" for="stand">Chasen Stand - ₱700</label>
+            <input type="number" id="stand_qty" class="qty-inputs" min="1" value="1">
+            </div>
+
+            <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="matcha">
+            <label class="form-check-label" for="matcha">Matcha Powder - ₱800</label>
+            <input type="number" id="matcha_qty" class="qty-inputs" min="1" value="1">
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button type="button" class="btn btn-custom" py-click="calculate_total">Calculate Total</button>
+        </div>
+        </form>
+
+        <div class="mt-4 text-center">
+        <h4 id="summary" class="fw-bold text-success"></h4>
+        </div>
+    </section>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>

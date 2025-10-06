@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Contact | Chacha</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #f5f5f0; 
+        }
+        header { 
+            background-color: #4b6043; 
+            color: white; 
+            padding: 1rem 0; 
+        }
+        .contact-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 2rem 1rem;
+            transition: transform 0.2s;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #4b6043;
+        }
+        img {
+            width: 35px; 
+            height: 35px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <img src="https://www.popsci.com/wp-content/uploads/2021/10/15/close-up-photo-of-a-matcha-latte-cup.jpg?quality=85" alt="Chacha Logo" class="me-2">
+                Chacha
+            </a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="order.html">Order</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container my-5 text-center">
+        <h2 class="fw-bold mb-5">Contact Us</h2>
+
+        <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4">
+            <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h5 class="fw-bold mb-2">Location</h5>
+            <p>Kyoto-Inspired Matcha House<br>Manila, Philippines</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h5 class="fw-bold mb-2">Contact Number</h5>
+            <p>0977-062-3628</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h5 class="fw-bold mb-2">Email</h5>
+            <p>chacha@gmail.com</p>
+            </div>
+        </div>
+        </div>
+
+        <p class="mt-5">Follow us on 
+        <a href="#" class="link-dark fw-bold">Facebook</a> & 
+        <a href="#" class="link-dark fw-bold">Instagram</a>
+        </p>
+    </section>
+</body>
+</html>
